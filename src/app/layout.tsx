@@ -1,16 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono,Lexend } from "next/font/google";
+import { Lexend } from "next/font/google";
 import { Provider } from "@/components/ui/provider"
 import "./globals.css";
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const lexend = Lexend({
   weight: ['100','200','300','400','500','600', '700','800','900'],
@@ -32,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="dark overflow-x-hidden md:overflow-x-visible ">
       <body
-        className={`${lexend.variable} ${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden md:overflow-x-visible `}
+        className={`${lexend.variable}  antialiased overflow-x-hidden md:overflow-x-visible `}
       > 
       
         <Provider>{children}</Provider>

@@ -74,7 +74,7 @@ export default function CertificationsList({ certifications }: CertificationsLis
           className="block transition-transform hover:scale-[1.02] hover:shadow-lg"
         >
           <div 
-            ref={el => certRefs.current[index] = el}
+            ref={el => {certRefs.current[index] = el}}
             className="border rounded-lg p-6 flex items-center gap-4 min-h-[100px] opacity-0"
           >
             {/* Image placeholder */}
